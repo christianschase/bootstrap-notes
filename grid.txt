@@ -1,0 +1,39 @@
+Bootstrap uses a grid system to simplify the layout of a website based off of flexbox which organizes content in rows or columns
+
+At the heart of this grid, -containers- are the basis. Inside of these containers we nest -rows- as immediate children, and then
+we nest -columns- as children of rows. Inside of these columns is where the content will live
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <!-- A column inside a row inside a container! -->
+            </div>
+        </div>
+    </div>
+
+The container, by default, will have a width relative to a user's screen size, become horizontally centered, and have a left and 
+right margin
+
+If we wanted to container to take up the entire width of the screen we can assign a class of 'container-fluid'
+
+    <div class="container-fluid"></div>
+
+We can add as many rows per container as wanted and by default a row will take up the entire width of its parent container
+
+By default, a column will take up the entire width of its parent row. As more columns are added inside of a row the default
+behavior is for each column's width to be readjusted to fit in the row (each column will have the same width)
+
+At most, a row can accommodate 12 columns
+
+To decide the width of a column, append a hyphen and a number to the "col" class. If a specified width for a second (or third-12)
+column was not given, it will resize itself to fill in the remaining space in the row
+
+    <div class="col-8">
+        <p>This is the width of 8 columns.</p>
+    </div>
+
+Alternatively, to set the width of a column as the width of the content inside of the column, just append "auto" to the col class
+
+    <div class="col-auto">
+        <p>This content determines the width of the parent column</p>
+    </div>
